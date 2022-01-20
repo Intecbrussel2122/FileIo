@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Configuration;
 
 namespace DirectoryDemo
 {
@@ -27,7 +22,16 @@ namespace DirectoryDemo
             //{
             //    Directory.CreateDirectory(@"DirOne");
             //}
-           
+
+            //string files1 = string.Join("\n", Directory.GetFiles(Directory.GetCurrentDirectory()));
+            //Console.WriteLine(files1);
+            string[] files = Directory.GetFiles(@"c:\windows");
+
+            foreach (var item in files)
+            {
+                Console.WriteLine(item);
+            }
+
             Console.ReadKey();
         }
     }
